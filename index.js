@@ -4,5 +4,4 @@ window.onload = function () {
         preventScrolling: true
     });
     document.getElementById("menu-button").onclick = sidenav.open.bind(sidenav);
-    sidenav.open();
 };
