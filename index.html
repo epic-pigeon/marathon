@@ -7,12 +7,14 @@
     <link href="index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="materialize/js/materialize.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
 <header>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">
+            <a href="#" data-activates="mobile-demo" id="menu-button" class="button-collapse left hide-on-large-only"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo center">
                 <img src="img/logo.jpg" id="logo" alt="Logo">
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -23,6 +25,13 @@
                 <li><a href="javascript:alert('Contact is not ready yet!')">Contact</a></li>
             </ul>
         </div>
+        <ul class="sidenav" id="sidenav">
+            <li><a href="#">Home</a></li>
+            <li><a href="javascript:alert('Service is not ready yet!')">Service</a></li>
+            <li><a href="javascript:alert('Team is not ready yet!')">Team</a></li>
+            <li><a href="javascript:alert('Testimonials are not ready yet!')">Testimonials</a></li>
+            <li><a href="javascript:alert('Contact is not ready yet!')">Contact</a></li>
+        </ul>
     </nav>
 </header>
 <div class="bg-image">

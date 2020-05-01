@@ -9,8 +9,16 @@ body, html {
 nav {
     margin: 0 0 0 0;
     position: fixed;
-    z-index: 99;
+    z-index: 1;
     background-color: rgb(34, 34, 34);
+}
+
+#sidenav li {
+    z-index: 1000;
+}
+
+.sidenav-overlay {
+    z-index: 0;
 }
 
 #nav-mobile li {
@@ -47,7 +55,6 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
     width: 70%;
     padding: 20px;
     text-align: center;
