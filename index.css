@@ -13,6 +13,10 @@ nav {
     background-color: rgb(34, 34, 34);
 }
 
+.nav-wrapper {
+    min-height: 64px;
+}
+
 #sidenav li {
     z-index: 1000;
 }
@@ -84,29 +88,11 @@ nav {
     top: 450%;
 }
 
-@media only screen and (max-width: 992px) {
-    .bg-text-home {
-        width: 470px !important;
-    }
-    .bg-text-service {
-        width: 300px !important;
-    }
-    .bg-text-team {
-        width: 250px !important;
-    }
-    .bg-text-testimonials {
-        font-max-size: 1px !important;
-        width: 500px !important;
-    }
-    .bg-text-contact {
-        width: 350px !important;
-    }
-}
-
 .bg-text {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
+    min-width: 500px;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.4);
     color: white;
