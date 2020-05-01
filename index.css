@@ -13,6 +13,14 @@ nav {
     background-color: rgb(34, 34, 34);
 }
 
+#nav-mobile li {
+    transition: 0.3s;
+}
+
+#nav-mobile li:hover {
+    background-color: rgb(70, 70, 70);
+}
+
 #logo {
     height: 64px;
     width: 64px;
@@ -47,4 +55,9 @@ nav {
 
 .bg-text h1 {
     font-family: 'Raleway', sans-serif;
+}
+
+.bg-text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
 }
