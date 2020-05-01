@@ -9,7 +9,7 @@ body, html {
 nav {
     margin: 0 0 0 0;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     background-color: rgb(34, 34, 34);
 }
 
@@ -20,10 +20,6 @@ nav {
 #menu-button {
     margin-top: 8px;
     margin-left: 8px;
-}
-
-.sidenav-overlay {
-    z-index: 0;
 }
 
 #nav-mobile li {
@@ -39,8 +35,27 @@ nav {
     width: 64px;
 }
 
-.bg-image {
+.bg-image-home {
     background-image: url("img/parrot.jpg");
+}
+
+.bg-image-service {
+    background-image: url("img/parrot2.jpg");
+}
+
+.bg-image-team {
+    background-image: url("img/parrot3.jpg");
+}
+
+.bg-image-testimonials {
+    background-image: url("img/parrot4.jpg");
+}
+
+.bg-image-contact {
+    background-image: url("img/parrot5.jpg");
+}
+
+.bg-image {
     filter: blur(16px);
     -webkit-filter: blur(16px);
     height: 100%;
@@ -49,19 +64,57 @@ nav {
     background-size: cover;
 }
 
-.bg-text {
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.4);
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
+.bg-text-home {
     top: 50%;
+}
+
+.bg-text-service {
+    top: 150%;
+}
+
+.bg-text-team {
+    top: 250%;
+}
+
+.bg-text-testimonials {
+    top: 350%;
+}
+
+.bg-text-contact {
+    top: 450%;
+}
+
+@media only screen and (max-width: 992px) {
+    .bg-text-home {
+        width: 470px !important;
+    }
+    .bg-text-service {
+        width: 300px !important;
+    }
+    .bg-text-team {
+        width: 250px !important;
+    }
+    .bg-text-testimonials {
+        font-max-size: 1px !important;
+        width: 500px !important;
+    }
+    .bg-text-contact {
+        width: 350px !important;
+    }
+}
+
+.bg-text {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
     padding: 20px;
+    z-index: 1;
     text-align: center;
 }
 

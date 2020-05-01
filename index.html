@@ -5,42 +5,65 @@
     <title>Title</title>
     <link href="materialize/css/materialize.min.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro&display=swap"
+          rel="stylesheet">
     <script src="materialize/js/materialize.min.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
-<header>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" data-activates="mobile-demo" id="menu-button" class="button-collapse left hide-on-large-only">
-                <img src="img/menu-4-48.png" alt="Menu">
-            </a>
-            <a href="#" class="brand-logo center">
-                <img src="img/logo.png" id="logo" alt="Logo" style="width: auto;">
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="javascript:alert('Service is not ready yet!')">Service</a></li>
-                <li><a href="javascript:alert('Team is not ready yet!')">Team</a></li>
-                <li><a href="javascript:alert('Testimonials are not ready yet!')">Testimonials</a></li>
-                <li><a href="javascript:alert('Contact is not ready yet!')">Contact</a></li>
-            </ul>
-        </div>
-        <ul class="sidenav" id="sidenav">
-            <li><a href="#">Home</a></li>
-            <li><a href="javascript:alert('Service is not ready yet!')">Service</a></li>
-            <li><a href="javascript:alert('Team is not ready yet!')">Team</a></li>
-            <li><a href="javascript:alert('Testimonials are not ready yet!')">Testimonials</a></li>
-            <li><a href="javascript:alert('Contact is not ready yet!')">Contact</a></li>
+<nav>
+    <div class="nav-wrapper">
+        <a data-activates="mobile-demo" id="menu-button" class="button-collapse left hide-on-large-only">
+            <img src="img/menu-4-48.png" alt="Menu">
+        </a>
+        <a class="brand-logo center">
+            <img src="img/logo.png" id="logo" alt="Logo" style="width: auto;">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li id="nav-li-home"><a>Home</a></li>
+            <li id="nav-li-service"><a>Service</a></li>
+            <li id="nav-li-team"><a>Team</a></li>
+            <li id="nav-li-testimonials"><a>Testimonials</a></li>
+            <li id="nav-li-contact"><a>Contact</a></li>
         </ul>
-    </nav>
-</header>
-<div class="bg-image">
+    </div>
+</nav>
+<ul class="sidenav" id="sidenav">
+    <li><a>Home</a></li>
+    <li><a>Service</a></li>
+    <li><a>Team</a></li>
+    <li><a>Testimonials</a></li>
+    <li><a>Contact</a></li>
+</ul>
+<div class="bg-image-home bg-image">
 </div>
-<div class="bg-text">
+<div class="bg-text bg-text-home">
     <h1>INTRODUCING QUACK-DUCK</h1>
     <p>company that helps people as well as parrots</p>
+</div>
+<div class="bg-image-service bg-image">
+</div>
+<div class="bg-text bg-text-service">
+    <h1>SERVICE</h1>
+    <p>fastest, cheapest and highest quality works on the market</p>
+</div>
+<div class="bg-image-team bg-image">
+</div>
+<div class="bg-text bg-text-team">
+    <h1>TEAM</h1>
+    <p>best specialists in a broad range of topics</p>
+</div>
+<div class="bg-image-testimonials bg-image">
+</div>
+<div class="bg-text bg-text-testimonials">
+    <h1>TESTIMONIALS</h1>
+    <p>a special mention to Anton "professorik" Boreiko and Nikita "a_void" Ostapliuk</p>
+</div>
+<div class="bg-image-contact bg-image">
+</div>
+<div class="bg-text bg-text-contact">
+    <h1>CONTACT</h1>
+    <p>contact us via <a href="mailto:ddark.ppast.ttime@gmail.com">ddark.ppast.ttime@gmail.com</a></p>
 </div>
 </body>
 </html>
