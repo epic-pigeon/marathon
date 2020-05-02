@@ -14,6 +14,18 @@ window.onload = function () {
             goToPart(i);
         }
     }
+
+    let arr = [];
+    for (let i = 0; i < 6; i++) {
+        arr.push(i === 0 ? "parrot.jpg" : `parrot${i+1}.jpg`)
+    }
+
+    for (let i = 0; i < 6; i++) {
+        arr = arr.sort(() => Math.random() - 0.5);
+        let img = arr[0];
+        document.getElementsByClassName(NavElement.getBgImgClass(i))[0].style["background-image"] = `url(img/${img})`;
+        arr = arr.slice(1);
+    }
 };
 
 const NavElement = Object.freeze({

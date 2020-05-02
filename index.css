@@ -37,7 +37,7 @@ nav {
 
 .logo {
     height: 64px;
-    width: auto;
+    width: 64px;
 }
 
 .logo-text {
@@ -46,29 +46,6 @@ nav {
     margin-right: 10px;
 }
 
-.bg-image-home {
-    background-image: url("img/parrot.jpg");
-}
-
-.bg-image-merits {
-    background-image: url("img/parrot2.jpg");
-}
-
-.bg-image-service {
-    background-image: url("img/parrot3.jpg");
-}
-
-.bg-image-team {
-    background-image: url("img/parrot4.jpg");
-}
-
-.bg-image-testimonials {
-    background-image: url("img/parrot5.jpg");
-}
-
-.bg-image-contact {
-    background-image: url("img/parrot6.jpg");
-}
 
 .bg-image {
     filter: blur(16px);
@@ -87,17 +64,17 @@ nav {
     top: 150%;
 }
 
-.bg-text-merits{
+.cards .row .col .card {
+    background-color: rgb(34, 34, 34); /* fallback for older browsers */
+    background-color: rgba(34, 34, 34, 0.7);
+}
+
+.bg-text-merits {
     top: 250%;
 }
 
 .bg-text-team {
     top: 350%;
-}
-
-.cards .row .col .card {
-    background-color: rgb(34, 34, 34); /* fallback for older browsers */
-    background-color: rgba(34, 34, 34, 0.7);
 }
 
 .bg-text-testimonials {
@@ -131,10 +108,19 @@ nav {
 .bg-text p {
     font-family: 'Raleway', sans-serif;
     font-size: large;
+    font-weight: lighter;
 }
 
-@media all and (max-width: 992px) {
+.charity-card .card .card-image .card-title {
+    margin-left: 10px;
+}
+
+.col .card .card-content {
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 1201px) {
     .cheap-card {
-        transform: translate(50%, 0);
+        transform: translateX(100%);
     }
 }
