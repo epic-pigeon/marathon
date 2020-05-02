@@ -265,8 +265,20 @@
 <div id="sign-in-modal" class="modal">
     <div class="modal-content">
         <h4>Sign In</h4>
-        <p>A bunch of text</p>
     </div>
+    <form class="col s12">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix_sign_in" type="text" class="validate">
+            <label for="icon_prefix_sign_in">Login or Email</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">lock</i>
+            <input id="icon_password_sign_in" type="text" class="validate">
+            <label for="icon_password_sign_in">Password</label>
+        </div>
+    </form>
     <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
