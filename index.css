@@ -67,6 +67,12 @@ nav {
 .cards .row .col .card {
     background-color: rgb(34, 34, 34); /* fallback for older browsers */
     background-color: rgba(34, 34, 34, 0.7);
+    transition: 0.3s;
+}
+
+.cards .row .col .card:hover {
+    background-color: rgb(34, 34, 34);
+    transform: scale(1.05, 1.05);
 }
 
 .bg-text-merits {
