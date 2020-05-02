@@ -17,6 +17,18 @@ window.onload = function () {
     randomizeBg();
 
     for (const element of document.getElementsByClassName("logo")) element.onclick = randomizeBg;
+
+    const row = document.querySelector(".cards .row");
+    let cards = [...row.childNodes].filter(element => typeof element.tagName !== "undefined" && element.tagName.toLowerCase() === "div");
+    cards = cards.sort(() => Math.random() - 0.5);
+    while (row.firstChild) {
+        row.removeChild(row.lastChild)
+    }
+    for (const card of cards) {
+        row.appendChild(card);
+    }
+    console.log(cards[3]);
+    cards[3].className += " last-card";
 };
 
 function randomizeBg() {
