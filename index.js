@@ -15,6 +15,12 @@ window.onload = function () {
         }
     }
 
+    randomizeBg();
+
+    for (const element of document.getElementsByClassName("logo")) element.onclick = randomizeBg;
+};
+
+function randomizeBg() {
     let arr = [];
     for (let i = 0; i < 6; i++) {
         arr.push(i === 0 ? "parrot.jpg" : `parrot${i+1}.jpg`)
@@ -26,7 +32,7 @@ window.onload = function () {
         document.getElementsByClassName(NavElement.getBgImgClass(i))[0].style["background-image"] = `url(img/${img})`;
         arr.splice(idx, 1);
     }
-};
+}
 
 const NavElement = Object.freeze({
     HOME: 0,
