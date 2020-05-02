@@ -21,10 +21,10 @@ window.onload = function () {
     }
 
     for (let i = 0; i < 6; i++) {
-        arr = arr.sort(() => Math.random() - 0.5);
-        let img = arr[0];
+        let idx = parseInt(Math.random() * arr.length);
+        let img = arr[idx];
         document.getElementsByClassName(NavElement.getBgImgClass(i))[0].style["background-image"] = `url(img/${img})`;
-        arr = arr.slice(1);
+        arr.splice(idx, 1);
     }
 };
 
