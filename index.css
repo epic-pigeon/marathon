@@ -67,7 +67,7 @@ nav {
 .cards .row .col .card {
     background-color: rgb(34, 34, 34); /* fallback for older browsers */
     background-color: rgba(34, 34, 34, 0.7);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .cards .row .col .card:hover {
@@ -83,7 +83,7 @@ nav {
     top: 350%;
 }
 
-.bg-text-testimonials {
+.bg-text-reviews {
     top: 450%;
 }
 
@@ -118,7 +118,7 @@ nav {
 }
 
 .charity-card .card .card-image .card-title {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .col .card .card-content {
@@ -126,7 +126,15 @@ nav {
 }
 
 @media only screen and (min-width: 1201px) {
-    .cheap-card {
+    .price-card {
         transform: translateX(100%);
     }
+}
+
+#menu-button {
+    margin-top: 7px;
+}
+
+#menu-button i.material-icons {
+    font-size: 50px;
 }

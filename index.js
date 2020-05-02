@@ -3,7 +3,6 @@ window.onload = function () {
         if (window.pageYOffset === 0) activateNavElement(NavElement.HOME);
     }, 10);
     const sidenav = new M.Sidenav(document.getElementById("sidenav"), {
-        draggable: true,
         preventScrolling: true
     });
     document.getElementById("menu-button").onclick = sidenav.open.bind(sidenav);
@@ -29,7 +28,7 @@ function randomizeBg() {
     for (let i = 0; i < 6; i++) {
         let idx = parseInt(Math.random() * arr.length);
         let img = arr[idx];
-        document.getElementsByClassName(NavElement.getBgImgClass(i))[0].style["background-image"] = `url(img/${img})`;
+        document.getElementsByClassName("bg-image")[i].style["background-image"] = `url(img/${img})`;
         arr.splice(idx, 1);
     }
 }
@@ -39,19 +38,13 @@ const NavElement = Object.freeze({
     SERVICE: 1,
     MERITS: 2,
     TEAM: 3,
-    TESTIMONIALS: 4,
+    REVIEWS: 4,
     CONTACT: 5,
-    getLiId(element) {
-        return "nav-li-" + Object.keys(NavElement)[Object.values(NavElement).indexOf(element)].toLowerCase();
-    },
-    getBgImgClass(element) {
-        return "bg-image-" + Object.keys(NavElement)[Object.values(NavElement).indexOf(element)].toLowerCase();
-    },
 });
 
 function activateNavElement(id) {
     for (const element in NavElement) if (NavElement.hasOwnProperty(element) && typeof NavElement[element] === "number") {
-        const li = document.getElementById(NavElement.getLiId(NavElement[element]));
+        const li = document.querySelectorAll("#nav-mobile li")[NavElement[element]];
         li.style["background-color"] = id === NavElement[element] ? "rgb(0, 0, 0)" : "";
         li.onclick = id === NavElement[element] ? () => {} : () => goToPart(NavElement[element])
     }
@@ -60,14 +53,13 @@ function activateNavElement(id) {
 function goToPart(id) {
     window.scrollTo({
         behavior: "smooth",
-        top: document.getElementsByClassName(NavElement.getBgImgClass(id))[0].offsetTop - document.querySelector("nav .nav-wrapper").clientHeight
+        top: document.getElementsByClassName("bg-image")[id].offsetTop - document.querySelector("nav .nav-wrapper").clientHeight
     });
 }
 
 window.onscroll = function () {
-    const navHeight = document.querySelector("nav .nav-wrapper").clientHeight;
     for (let i = 0; i < 5; i++) {
-        if (window.pageYOffset < document.getElementsByClassName(NavElement.getBgImgClass(i+1))[0].offsetTop - navHeight) {
+        if (window.pageYOffset < document.getElementsByClassName("bg-image")[i+1].offsetTop - window.innerHeight/2) {
             activateNavElement(i);
             return;
         }
