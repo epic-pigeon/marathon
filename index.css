@@ -37,7 +37,7 @@ nav {
 
 .logo {
     height: 64px;
-    width: 64px;
+    width: auto;
 }
 
 .logo-text {
@@ -50,20 +50,24 @@ nav {
     background-image: url("img/parrot.jpg");
 }
 
-.bg-image-service {
+.bg-image-merits {
     background-image: url("img/parrot2.jpg");
 }
 
-.bg-image-team {
+.bg-image-service {
     background-image: url("img/parrot3.jpg");
 }
 
-.bg-image-testimonials {
+.bg-image-team {
     background-image: url("img/parrot4.jpg");
 }
 
-.bg-image-contact {
+.bg-image-testimonials {
     background-image: url("img/parrot5.jpg");
+}
+
+.bg-image-contact {
+    background-image: url("img/parrot6.jpg");
 }
 
 .bg-image {
@@ -83,21 +87,25 @@ nav {
     top: 150%;
 }
 
+.bg-text-merits{
+    top: 250%;
+}
+
+.bg-text-team {
+    top: 350%;
+}
+
 .cards .row .col .card {
     background-color: rgb(34, 34, 34); /* fallback for older browsers */
     background-color: rgba(34, 34, 34, 0.7);
 }
 
-.bg-text-team {
-    top: 250%;
-}
-
 .bg-text-testimonials {
-    top: 350%;
+    top: 450%;
 }
 
 .bg-text-contact {
-    top: 450%;
+    top: 550%;
 }
 
 .bg-text {

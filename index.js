@@ -8,7 +8,7 @@ window.onload = function () {
     });
     document.getElementById("menu-button").onclick = sidenav.open.bind(sidenav);
     const elements = document.querySelectorAll("#sidenav li");
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         elements[i].onclick = function () {
             sidenav.close();
             goToPart(i);
@@ -19,9 +19,10 @@ window.onload = function () {
 const NavElement = Object.freeze({
     HOME: 0,
     SERVICE: 1,
-    TEAM: 2,
-    TESTIMONIALS: 3,
-    CONTACT: 4,
+    MERITS: 2,
+    TEAM: 3,
+    TESTIMONIALS: 4,
+    CONTACT: 5,
     getLiId(element) {
         return "nav-li-" + Object.keys(NavElement)[Object.values(NavElement).indexOf(element)].toLowerCase();
     },
@@ -47,7 +48,7 @@ function goToPart(id) {
 
 window.onscroll = function () {
     const navHeight = document.querySelector("nav .nav-wrapper").clientHeight;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
         if (window.pageYOffset < document.getElementsByClassName(NavElement.getBgImgClass(i+1))[0].offsetTop - navHeight) {
             activateNavElement(i);
             return;
