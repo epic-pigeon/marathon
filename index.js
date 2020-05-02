@@ -24,6 +24,15 @@ window.onload = function () {
     const serviceTabs = new M.Tabs(document.getElementById("service-tabs"), {
         //swipeable: true
     });
+
+    const accountDropdown = new M.Dropdown(document.getElementById("account-dropdown-trigger"), {});
+
+    const signInModal = new M.Modal(document.getElementById("sign-in-modal"), {
+        preventScrolling: false
+    });
+    const signUpModal = new M.Modal(document.getElementById("sign-up-modal"), {
+        preventScrolling: false
+    });
 };
 
 function randomizeCards() {
