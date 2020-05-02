@@ -41,7 +41,7 @@ function activateNavElement(id) {
 function goToPart(id) {
     window.scrollTo({
         behavior: "smooth",
-        top: document.getElementsByClassName(NavElement.getBgImgClass(id))[0].offsetTop
+        top: document.getElementsByClassName(NavElement.getBgImgClass(id))[0].offsetTop - document.querySelector("nav .nav-wrapper").clientHeight
     });
 }
 
