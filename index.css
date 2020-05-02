@@ -64,6 +64,10 @@ nav {
     top: 150%;
 }
 
+.bg-text-service .row .tabs-content {
+    margin-top: 20px;
+}
+
 .cards .row .col .card {
     background-color: rgb(34, 34, 34); /* fallback for older browsers */
     background-color: rgba(34, 34, 34, 0.7);
@@ -81,6 +85,7 @@ nav {
 
 .bg-text-team {
     top: 350%;
+    min-height: 430px;
 }
 
 .bg-text-reviews {
@@ -107,14 +112,10 @@ nav {
     text-align: center;
 }
 
-.bg-text h1 {
-    font-family: 'Raleway', sans-serif;
-}
-
-.bg-text p {
+.bg-text {
     font-family: 'Raleway', sans-serif;
     font-size: large;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .charity-card .card .card-image .card-title {
@@ -149,6 +150,35 @@ nav {
     transition: 0.2s;
     background-color: white;
     display: none;
+}
+
+.collapsible-header {
+    background-color: rgb(34, 34, 34) !important; /* fallback for older browsers */
+    background-color: rgba(34, 34, 34, 0.7) !important;
+}
+
+.collapsible-body {
+    background-color: rgb(17, 17, 17) !important; /* fallback for older browsers */
+    background-color: rgba(17, 17, 17, 0.4) !important;
+}
+
+#service-tabs {
+    background-color: transparent;
+}
+
+#service-tabs li a {
+    background-color: transparent;
+    color: white;
+}
+
+#service-tabs li a.active {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+#service-tabs li.indicator {
+    background-color: rgb(255, 255, 255) !important; /* fallback for older browsers */
+    background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 #preloader .preloader-wrapper {

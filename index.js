@@ -15,11 +15,21 @@ window.onload = function () {
     }
 
     randomizeBg();
+    randomizeCards();
 
     for (const element of document.getElementsByClassName("logo")) element.onclick = randomizeBg;
 
+    const teamList = new M.Collapsible(document.getElementById("team-list"), {});
+
+    const serviceTabs = new M.Tabs(document.getElementById("service-tabs"), {
+        //swipeable: true
+    });
+};
+
+function randomizeCards() {
     const row = document.querySelector(".cards .row");
     let cards = [...row.childNodes].filter(element => typeof element.tagName !== "undefined" && element.tagName.toLowerCase() === "div");
+    cards[3].className = cards[3].className.split(" ").filter(val => val !== "last-card").join(" ");
     cards = cards.sort(() => Math.random() - 0.5);
     while (row.firstChild) {
         row.removeChild(row.lastChild)
@@ -27,9 +37,8 @@ window.onload = function () {
     for (const card of cards) {
         row.appendChild(card);
     }
-    console.log(cards[3]);
     cards[3].className += " last-card";
-};
+}
 
 function randomizeBg() {
     let arr = [];
