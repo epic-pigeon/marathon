@@ -7,6 +7,7 @@
     <link href="index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="translation.js"></script>
     <script src="materialize/js/materialize.min.js"></script>
     <script src="index.js"></script>
 </head>
@@ -68,72 +69,74 @@
             <img src="img/logo.png" alt="Logo" class="logo">
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a>Home</a></li>
-            <li><a>Service</a></li>
-            <li><a>Merits</a></li>
-            <li><a>Team</a></li>
-            <li><a>Reviews</a></li>
-            <li><a>Contact</a></li>
-            <li class="dropdown-trigger" data-target="account-dropdown" id="account-dropdown-trigger"><a>Account</a></li>
+            <li><a>{{ Translation.default.HOME }}</a></li>
+            <li><a>{{ Translation.default.SERVICE }}</a></li>
+            <li><a>{{ Translation.default.MERITS }}</a></li>
+            <li><a>{{ Translation.default.TEAM }}</a></li>
+            <li><a>{{ Translation.default.REVIEWS }}</a></li>
+            <li><a>{{ Translation.default.CONTACT }}</a></li>
+            <li class="dropdown-trigger" data-target="account-dropdown" id="account-dropdown-trigger" style="width: 200px"><a class="center-align">{{ Translation.default.ACCOUNT }}</a></li>
         </ul>
         <ul id="account-dropdown" class="dropdown-content">
-            <li id="sign-up"><a class="modal-trigger" href="#sign-up-modal">Sign Up</a></li>
-            <li id="sign-in"><a class="modal-trigger" href="#sign-in-modal">Sign In</a></li>
+            <li><a class="modal-trigger" href="#sign-up-modal">{{ Translation.default.SIGN_UP }}</a></li>
+            <li><a class="modal-trigger" href="#sign-in-modal">{{ Translation.default.SIGN_IN }}</a></li>
         </ul>
     </div>
 </nav>
 <ul class="sidenav" id="sidenav">
-    <li><a>Home</a></li>
-    <li><a>Service</a></li>
-    <li><a>Merits</a></li>
-    <li><a>Team</a></li>
-    <li><a>Reviews</a></li>
-    <li><a>Contact</a></li>
+    <li><a>{{ Translation.default.HOME }}</a></li>
+    <li><a>{{ Translation.default.SERVICE }}</a></li>
+    <li><a>{{ Translation.default.MERITS }}</a></li>
+    <li><a>{{ Translation.default.TEAM }}</a></li>
+    <li><a>{{ Translation.default.REVIEWS }}</a></li>
+    <li><a>{{ Translation.default.CONTACT }}</a></li>
+    <li><a class="modal-trigger" href="#sign-up-modal">{{ Translation.default.SIGN_UP }}</a></li>
+    <li><a class="modal-trigger" href="#sign-in-modal">{{ Translation.default.SIGN_IN }}</a></li>
 </ul>
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-home">
-    <h1>INTRODUCING QUACK-DUCK</h1>
-    <p>company that helps people as well as parrots</p>
+    <h1>{{ Translation.default.HOME_TITLE }}</h1>
+    <p>{{ Translation.default.HOME_CONTENT }}</p>
 </div>
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-service">
-    <h1>SERVICE</h1>
+    <h1>{{ Translation.default.SERVICE.toUpperCase() }}</h1>
     <div class="row">
         <div class="col s12">
             <ul class="tabs" id="service-tabs">
-                <li class="tab col s4"><a class="active" href="#applications">Applications</a></li>
-                <li class="tab col s4"><a href="#tests">Tests</a></li>
-                <li class="tab col s4"><a href="#courseworks">Courseworks</a></li>
+                <li class="tab col s4"><a class="active" href="#applications">{{ Translation.default.SERVICE_APPLICATIONS }}</a></li>
+                <li class="tab col s4"><a href="#tests">{{ Translation.default.SERVICE_TESTS }}</a></li>
+                <li class="tab col s4"><a href="#courseworks">{{ Translation.default.SERVICE_COURSEWORKS }}</a></li>
             </ul>
         </div>
         <div id="applications" class="col s12 tabs-content">
-            Quick, functional and well-designed multi-platform applications
+            {{ Translation.default.SERVICE_APPLICATIONS_TEXT }}
         </div>
         <div id="tests" class="col s12 tabs-content">
-            Detailed solutions for any kind of tests
+            {{ Translation.default.SERVICE_TESTS_TEXT }}
         </div>
         <div id="courseworks" class="col s12 tabs-content">
-            Well-written, unique and informative courseworks in any area
+            {{ Translation.default.SERVICE_COURSEWORKS_TEXT }}
         </div>
     </div>
 </div>
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-merits">
-    <h1>MERITS</h1>
+    <h1>{{ Translation.default.MERITS }}</h1>
     <div class="cards">
         <div class="row">
             <div class="col s6 m6 l6 xl4 speed-card">
                 <div class="small card">
                     <div class="card-image">
                         <img src="img/parrot-speed.jpg" alt="Speed">
-                        <span class="card-title">Speed</span>
+                        <span class="card-title">{{ Translation.default.MERITS_SPEED }}</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            First results are to be delivered in a matter of days
+                            {{ Translation.default.MERITS_SPEED_TEXT }}
                         </p>
                     </div>
                 </div>
@@ -142,11 +145,11 @@
                 <div class="small card">
                     <div class="card-image">
                         <img src="img/parrot-charity.jpg" alt="Charity">
-                        <span class="card-title">Charity</span>
+                        <span class="card-title">{{ Translation.default.MERITS_CHARITY }}</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            10% of your money is used to help endangered parrot species
+                            {{ Translation.default.MERITS_CHARITY_TEXT }}
                         </p>
                     </div>
                 </div>
@@ -155,11 +158,11 @@
                 <div class="small card">
                     <div class="card-image">
                         <img src="img/parrot-quality.jpg" alt="Quality">
-                        <span class="card-title">Quality</span>
+                        <span class="card-title">{{ Translation.default.MERITS_QUALITY }}</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            Best specialists in the areas you need
+                            {{ Translation.default.MERITS_QUALITY_TEXT }}
                         </p>
                     </div>
                 </div>
@@ -168,11 +171,11 @@
                 <div class="small card">
                     <div class="card-image">
                         <img src="img/parrot-price.jpg" alt="Price">
-                        <span class="card-title">Price</span>
+                        <span class="card-title">{{ Translation.default.MERITS_PRICE }}</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            Lowest prices on the market
+                            {{ Translation.default.MERITS_PRICE_TEXT }}
                         </p>
                     </div>
                 </div>
@@ -183,74 +186,73 @@
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-team">
-    <h1>TEAM</h1>
+    <h1>{{ Translation.default.TEAM }}</h1>
     <ul id="team-list" class="collapsible">
         <li class="active">
-            <div class="collapsible-header">Nikita "a_void" Ostapliuk</div>
-            <div class="collapsible-body">An experienced programmer with thousands of hours of experience in various languages, including C++, Java, HTML, CSS, JS, Python, PHP, ...</div>
+            <div class="collapsible-header">{{ Translation.default.TEAM_NIKITA }}</div>
+            <div class="collapsible-body">{{ Translation.default.TEAM_NIKITA_TEXT }}</div>
         </li>
         <li>
-            <div class="collapsible-header">Anton "professorik" Boreiko</div>
-            <div class="collapsible-body">An wonderful programmer with a great experience in Java, Python as well as an outstanding mathematician</div>
+            <div class="collapsible-header">{{ Translation.default.TEAM_ANTON }}</div>
+            <div class="collapsible-body">{{ Translation.default.TEAM_ANTON_TEXT }}</div>
         </li>
     </ul>
 </div>
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-reviews">
-    <h1>REVIEWS</h1>
-    <iframe src="https://www.youtube.com/embed/Nee4VxRk4cA?autoplay=1" id="video"></iframe>
+    <h1>{{ Translation.default.REVIEWS.toUpperCase() }}</h1>
 </div>
 <div class="bg-image">
 </div>
 <div class="bg-text bg-text-contact">
-    <h1>CONTACT</h1>
-    <p>contact us via <a href="mailto:ddark.ppast.ttime@gmail.com">ddark.ppast.ttime@gmail.com</a></p>
+    <h1>{{ Translation.default.CONTACT.toUpperCase() }}</h1>
+    <p>{{ Translation.default.CONTACT_TEXT }}<a href="mailto:ddark.ppast.ttime@gmail.com">ddark.ppast.ttime@gmail.com</a></p>
 </div>
 
 <div id="sign-up-modal" class="white-text modal">
     <div class="modal-content">
-        <h4>Sign Up</h4>
-        <p>Enter your information</p>
+        <h4>{{ Translation.default.SIGN_UP }}</h4>
+        <p>{{ Translation.default.FORM_ENTER_INFORMATION }}</p>
         <form class="col s12">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Login</label>
+                    <label for="icon_prefix">{{ Translation.default.FORM_LOGIN }}</label>
                     <span class="helper-text" data-error="wrong" data-success="right"></span>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">email</i>
                     <input id="icon_email" type="email" class="validate">
-                    <label for="icon_email">Email</label>
+                    <label for="icon_email">{{ Translation.default.FORM_EMAIL }}</label>
                     <span class="helper-text" data-error="wrong" data-success="right"></span>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">sosiska_v_teste</i>
                     <input id="icon_first_name" type="text" class="validate">
-                    <label for="icon_first_name">First Name</label>
+                    <label for="icon_first_name">{{ Translation.default.FORM_FIRST_NAME }}</label>
                     <span class="helper-text" data-error="wrong" data-success="right"></span>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">sosiska_v_teshe</i>
                     <input id="icon_second_name" type="text" class="validate">
-                    <label for="icon_second_name">Second Name</label>
+                    <label for="icon_second_name">{{ Translation.default.FORM_LAST_NAME }}</label>
                     <span class="helper-text" data-error="wrong" data-success="right"></span>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">sosiska</i>
                     <input id="icon_password" type="password" class="validate">
-                    <label for="icon_password">Password</label>
+                    <label for="icon_password">{{ Translation.default.FORM_PASSWORD }}</label>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col s12 m12 l6 xl6">
                     <i class="material-icons prefix">sosiska</i>
                     <input id="icon_repeated_password" type="password" class="validate">
-                    <label for="icon_repeated_password">Repeat Password</label>
+                    <label for="icon_repeated_password">{{ Translation.default.FORM_REPEAT_PASSWORD }}</label>
                 </div>
             </div>
         </form>
@@ -262,18 +264,18 @@
 
 <div id="sign-in-modal" class="white-text modal">
     <div class="modal-content">
-        <h4>Sign In</h4>
+        <h4>{{ Translation.default.SIGN_IN }}</h4>
         <form class="col s12">
             <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="icon_prefix_sign_in" type="text" class="validate">
-                <label for="icon_prefix_sign_in">Login or Email</label>
+                <label for="icon_prefix_sign_in">{{ Translation.default.FORM_LOGIN_OR_EMAIL }}</label>
                 <span class="helper-text" data-error="wrong" data-success="right"></span>
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">lock</i>
                 <input id="icon_password_sign_in" type="password" class="validate">
-                <label for="icon_password_sign_in">Password</label>
+                <label for="icon_password_sign_in">{{ Translation.default.FORM_PASSWORD }}</label>
             </div>
         </form>
     </div>

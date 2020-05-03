@@ -1,4 +1,6 @@
 window.onload = function () {
+    translate();
+
     setTimeout(() => {
         if (window.pageYOffset === 0) activateNavElement(NavElement.HOME);
     }, 10);
@@ -115,4 +117,33 @@ async function fingerprint() {
             })
         }, 500);
     });
+}
+
+let __initialBody;
+
+function translate() {
+    let initialBody = __initialBody || (__initialBody = document.getElementsByTagName("body")[0].innerHTML);
+    let result = "";
+    for (let i = 0; i < initialBody.length; i++) {
+        if (initialBody[i] === "{") {
+            if (initialBody[i+1] === "{") {
+                let js = "";
+                for (let j = i+2; j < initialBody.length; j++) {
+                    if (initialBody[j] === "}") {
+                        if (initialBody[j+1] === "}") {
+                            i = j+1;
+                            try {
+                                result += eval(js);
+                            } catch (e) {
+                                console.log(js);
+                                throw e;
+                            }
+                            break;
+                        } else js += "}"
+                    } else js += initialBody[j];
+                }
+            } else result += "{";
+        } else result += initialBody[i];
+    }
+    document.getElementsByTagName("body")[0].innerHTML = result;
 }
