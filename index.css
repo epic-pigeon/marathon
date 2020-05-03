@@ -232,7 +232,7 @@ label.active {
     background-color: rgb(40, 40, 40);
 }
 
-#adblock-modal .modal-content #ads-dropdown {
+#ads-dropdown {
     height: 200px !important;
     width: 300px !important;
     background-color: rgb(10, 10, 10);
