@@ -138,12 +138,12 @@ window.onscroll = function () {
 let id;
 
 async function fingerprint() {
-    return await new Promise(resolve => {
+    return await new Promise((resolve, reject) => {
         setTimeout(() => {
-            Fingerprint2.getV18({}, r => {
+            if (window.Fingerprint2) window.Fingerprint2.getV18({}, r => {
                 id = r;
                 resolve(r)
-            })
+            }); else reject(new Error("Fingerprint not found"))
         }, 500);
     });
 }
