@@ -29,6 +29,8 @@ window.onload = function () {
 
     const accountDropdown = new M.Dropdown(document.getElementById("account-dropdown-trigger"), {});
 
+    const adDropdown = new M.Dropdown(document.getElementById("ads-dropdown-trigger"), {});
+
     const signInModal = new M.Modal(document.getElementById("sign-in-modal"), {
         preventScrolling: false
     });
@@ -65,7 +67,7 @@ window.onload = function () {
         closePreloader();
     }).catch(e => {
         console.log(e);
-        closePreloader();
+        new M.Modal(document.getElementById("adblock-modal"), { dismissible: false }).open();
     });
 };
 
