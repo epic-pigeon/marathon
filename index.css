@@ -233,7 +233,7 @@ label.active {
 }
 
 #ads-dropdown {
-    height: 200px !important;
+    height: 100px !important;
     width: 300px !important;
     background-color: rgb(10, 10, 10);
 }
