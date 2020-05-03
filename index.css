@@ -233,7 +233,7 @@ label.active {
 }
 
 #adblock-modal .modal-content #ads-dropdown {
-    height: 200px;
-    width: 300px;
+    height: 200px !important;
+    width: 300px !important;
     background-color: rgb(10, 10, 10);
 }
