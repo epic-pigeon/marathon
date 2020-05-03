@@ -106,7 +106,7 @@ const NavElement = Object.freeze({
     SERVICE: 1,
     MERITS: 2,
     TEAM: 3,
-    REVIEWS: 4,
+    REVIEW: 4,
     CONTACT: 5,
 });
 
