@@ -62,6 +62,8 @@ window.onload = function () {
     resizeVideo();
     window.onresize = resizeVideo;
 
+    scrolled();
+
     fingerprint().then(r => {
         window.__fingerprint = r;
         closePreloader();
@@ -134,7 +136,7 @@ function goToPart(id) {
     });
 }
 
-window.onscroll = function () {
+function scrolled() {
     for (let i = 0; i < 5; i++) {
         if (window.pageYOffset < document.getElementsByClassName("bg-image")[i+1].offsetTop - window.innerHeight/2) {
             activateNavElement(i);
@@ -142,17 +144,15 @@ window.onscroll = function () {
         }
     }
     activateNavElement(NavElement.CONTACT);
-};
+}
 
-let id;
+window.onscroll = scrolled;
+
 
 async function fingerprint() {
     return await new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (window.Fingerprint2) window.Fingerprint2.getV18({}, r => {
-                id = r;
-                resolve(r)
-            }); else reject(new Error("Fingerprint not found"))
+            if (window.Fingerprint2) window.Fingerprint2.getV18({}, resolve); else reject(new Error("Fingerprint not found"))
         }, 500);
     });
 }
