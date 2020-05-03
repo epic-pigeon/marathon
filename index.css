@@ -224,6 +224,10 @@ label.active {
     background-color: rgb(20, 20, 20);
 }
 
-#languages-modal .modal-content .collection a:hover {
-    background-color: rgb(50, 50, 50);
+#languages-modal .modal-content .collection a.active {
+    background-color: rgb(70, 70, 70);
+}
+
+#languages-modal .modal-content .collection a:hover:not(.active) {
+    background-color: rgb(40, 40, 40);
 }

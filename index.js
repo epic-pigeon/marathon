@@ -148,10 +148,8 @@ async function fingerprint() {
     });
 }
 
-let __initialBody;
-
 function translate() {
-    let initialBody = __initialBody || (__initialBody = document.getElementsByTagName("body")[0].innerHTML);
+    let initialBody = document.getElementsByTagName("body")[0].innerHTML;
     let result = "";
     for (let i = 0; i < initialBody.length; i++) {
         if (initialBody[i] === "{") {
