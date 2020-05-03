@@ -231,3 +231,9 @@ label.active {
 #languages-modal .modal-content .collection a:hover:not(.active) {
     background-color: rgb(40, 40, 40);
 }
+
+#adblock-modal .modal-content #ads-dropdown {
+    height: 200px;
+    width: 300px;
+    background-color: rgb(10, 10, 10);
+}

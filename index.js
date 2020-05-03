@@ -67,6 +67,7 @@ window.onload = function () {
         closePreloader();
     }).catch(e => {
         console.log(e);
+        document.getElementById("preloader-spinner").style.display = "none";
         new M.Modal(document.getElementById("adblock-modal"), { dismissible: false }).open();
     });
 };
