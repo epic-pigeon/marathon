@@ -86,6 +86,9 @@ const Translation = Object.freeze({
         LANGUAGE_NAME_TRANSLATED: "Русский",
     },
     get default() {
+        return Translation[Translation.defaultLang]
+    },
+    get defaultLang() {
         let lang;
         if (localStorage.getItem("language") && Translation[localStorage.getItem("language")]) {
             lang = localStorage.getItem("language");
@@ -98,7 +101,7 @@ const Translation = Object.freeze({
             }
             localStorage.setItem("language", lang);
         }
-        return Translation[lang];
+        return lang;
     },
     setLanguage(lang) {
         if (Translation[lang]) {

@@ -35,13 +35,42 @@ window.onload = function () {
     const signUpModal = new M.Modal(document.getElementById("sign-up-modal"), {
         preventScrolling: false
     });
+    const languageModal = new M.Modal(document.getElementById("languages-modal"), {
+        preventScrolling: false
+    });
+
+    const languageCollection = document.querySelector("#languages-modal .modal-content .collection");
+    for (const lang in Translation) if (Translation.hasOwnProperty(lang) && lang !== "default" && typeof Translation[lang] === "object") {
+        const translation = Translation[lang];
+        const text = `${translation.LANGUAGE_NAME_TRANSLATED} (${translation.LANGUAGE_NAME})`;
+        const a = document.createElement("a");
+        a.className = "collection-item white-text";
+        a.innerText = text;
+        if (Translation.defaultLang === lang) {
+            a.className += " active";
+        } else {
+            a.onclick = function () {
+                Translation.setLanguage(lang);
+                window.location.reload();
+            }
+        }
+        languageCollection.appendChild(a);
+    }
+
     resizeVideo();
     window.onresize = resizeVideo;
+
+    fingerprint().then(closePreloader).catch(closePreloader);
 };
+
+function closePreloader() {
+    document.getElementById("preloader").style.opacity = "0";
+    setTimeout(() => document.getElementById("preloader").style.display = "none", 200)
+}
 
 function resizeVideo() {
     const video = document.getElementById("video");
-    video.style.height = (video.clientWidth / 16 * 9) + "px";
+    if (video) video.style.height = (video.clientWidth / 16 * 9) + "px";
 }
 
 function randomizeCards() {

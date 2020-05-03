@@ -7,6 +7,7 @@
     <link href="index.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="fingerprint/fingerprint.js"></script>
     <script src="translation.js"></script>
     <script src="materialize/js/materialize.min.js"></script>
     <script src="index.js"></script>
@@ -75,6 +76,7 @@
             <li><a>{{ Translation.default.TEAM }}</a></li>
             <li><a>{{ Translation.default.REVIEWS }}</a></li>
             <li><a>{{ Translation.default.CONTACT }}</a></li>
+            <li class="modal-trigger" data-target="languages-modal" id="languages-modal-trigger" style="width: 200px"><a class="center-align">{{ Translation.default.LANGUAGE }}</a></li>
             <li class="dropdown-trigger" data-target="account-dropdown" id="account-dropdown-trigger" style="width: 200px"><a class="center-align">{{ Translation.default.ACCOUNT }}</a></li>
         </ul>
         <ul id="account-dropdown" class="dropdown-content">
@@ -283,6 +285,12 @@
         <a href="#!" class="modal-close waves-effect waves-light btn-flat white-text">OK</a>
     </div>
 </div>
+<div id="languages-modal" class="white-text modal">
+    <div class="modal-content">
+        <div class="collection">
 
+        </div>
+    </div>
+</div>
 </body>
 </html>

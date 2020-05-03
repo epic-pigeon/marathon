@@ -148,8 +148,7 @@ nav {
     height: 100%;
     z-index: 1000;
     transition: 0.2s;
-    background-color: white;
-    display: none;
+    background-color: rgb(20, 20, 20);
 }
 
 .collapsible-header {
@@ -219,4 +218,12 @@ label.active {
 
 #video {
     width: 80%;
+}
+
+#languages-modal .modal-content .collection a {
+    background-color: rgb(20, 20, 20);
+}
+
+#languages-modal .modal-content .collection a:hover {
+    background-color: rgb(50, 50, 50);
 }
