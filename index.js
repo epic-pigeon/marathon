@@ -60,7 +60,13 @@ window.onload = function () {
     resizeVideo();
     window.onresize = resizeVideo;
 
-    fingerprint().then(r => (window.__fingerprint = r, closePreloader())).catch(e => (console.log(e), closePreloader));
+    fingerprint().then(r => {
+        window.__fingerprint = r;
+        closePreloader();
+    }).catch(e => {
+        console.log(e);
+        closePreloader();
+    });
 };
 
 function closePreloader() {
