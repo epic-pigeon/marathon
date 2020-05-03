@@ -124,7 +124,7 @@ const Translation = Object.freeze({
         TEAM_ANTON: "Антон \"professorik\" Борейко",
         TEAM_ANTON_TEXT: "Відмінний программіст з великим досвідом у Java, Python, також видатний математик",
         CONTACT_TEXT: "св'яжиться з нами по ",
-        LANGUAGE: "Язик",
+        LANGUAGE: "Мова",
         LANGUAGE_NAME: "Ukrainian",
         LANGUAGE_NAME_TRANSLATED: "Українська",
     },
