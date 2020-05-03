@@ -193,3 +193,30 @@ nav {
 #account-dropdown li a {
     color: white;
 }
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]) {
+    border-color: white !important;
+    caret-color: white;
+}
+
+i.material-icons {
+    color: lightgray !important;
+}
+
+i.material-icons.active {
+    color: white !important;
+}
+
+label.active {
+    color: white !important;
+}
+
+.modal, .modal .modal-footer {
+    background-color: rgb(20, 20, 20);
+}
+
+#video {
+    width: 80%;
+}

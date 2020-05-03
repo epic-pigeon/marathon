@@ -33,7 +33,14 @@ window.onload = function () {
     const signUpModal = new M.Modal(document.getElementById("sign-up-modal"), {
         preventScrolling: false
     });
+    resizeVideo();
+    window.onresize = resizeVideo;
 };
+
+function resizeVideo() {
+    const video = document.getElementById("video");
+    video.style.height = (video.clientWidth / 16 * 9) + "px";
+}
 
 function randomizeCards() {
     const row = document.querySelector(".cards .row");
@@ -96,3 +103,16 @@ window.onscroll = function () {
     }
     activateNavElement(NavElement.CONTACT);
 };
+
+let id;
+
+async function fingerprint() {
+    return await new Promise(resolve => {
+        setTimeout(() => {
+            Fingerprint2.getV18({}, r => {
+                id = r;
+                resolve(r)
+            })
+        }, 500);
+    });
+}
